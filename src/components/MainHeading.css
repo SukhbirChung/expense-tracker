@@ -1,0 +1,14 @@
+.MainHeading{
+    padding-block: 0.75rem;
+    border-radius: 0.75rem;
+    background-color: mediumpurple;
+}
+
+.MainHeading-Heading{
+    width: max-content;
+    margin: auto;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    background-color: purple;
+    color: white;
+}
