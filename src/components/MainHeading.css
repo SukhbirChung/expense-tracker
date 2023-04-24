@@ -1,14 +1,16 @@
-.MainHeading{
-    padding-block: 0.75rem;
+.MainHeading {
     border-radius: 0.75rem;
-    background-color: mediumpurple;
+    padding: 1rem;
+    background-color: #40005d;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-.MainHeading-Heading{
-    width: max-content;
-    margin: auto;
-    padding: 1rem 1.25rem;
-    border-radius: 0.75rem;
-    background-color: purple;
-    color: white;
+@media(min-width: 650px){
+    .MainHeading{
+        border-radius: 1rem;
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
 }
