@@ -1,42 +1,38 @@
 import React, { Component } from 'react';
-import './CRUDExpenses.css';
+import './AddExpense.css';
+import RenderAddExpenseForm from './RenderAddExpenseForm';
 
 class AddExpense extends Component {
     constructor(props) {
         super(props);
-        this.inputChangeHandler = this.inputChangeHandler.bind(this);
+        this.renderAddExpenseForm = this.renderAddExpenseForm.bind(this);
+        this.addNewExpense = this.addNewExpense.bind(this);
     }
 
     state = {
-        title: '',
-        amount: '',
-        date: ''
+        displayForm: false
     }
 
-    inputChangeHandler(evt) {
+    renderAddExpenseForm() {
         this.setState({
-            [evt.target.name]: evt.target.value
+            displayForm: true
         });
+    }
+
+    addNewExpense(newExpense) {
+        this.props.submit(newExpense);
+        this.setState({
+            displayForm: false
+        })
     }
 
     render() {
         return (
             <div className="AddExpense">
-                <form>
-                    <div>
-                        <label htmlFor="title">Title</label>
-                        <input type="text" id="title" name="title" value={this.state.title} onChange={this.inputChangeHandler} />
-                    </div>
-                    <div>
-                        <label htmlFor="amount">Amount</label>
-                        <input type="number" step="0.01" id="amount" name="amount" value={this.state.amount} onChange={this.inputChangeHandler} />
-                    </div>
-                    <div>
-                        <label htmlFor="date">Date</label>
-                        <input type="date" id="date" name="date" value={this.state.date} onChange={this.inputChangeHandler} />
-                    </div>
-                    <button type="submit">Add Expense</button>
-                </form>
+                {this.state.displayForm ?
+                    <RenderAddExpenseForm submit={this.addNewExpense} /> :
+                    <button className="AddExpense-Button" onClick={this.renderAddExpenseForm}>Add Expense</button>
+                }
             </div>
         );
     }

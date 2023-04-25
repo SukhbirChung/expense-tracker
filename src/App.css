@@ -55,10 +55,3 @@ table {
 strong {
     font-weight: bold;
 }
-
-.App {
-    font-family: 'Roboto', sans-serif;
-    padding: 2rem;
-    background-color: #3f3f3f;
-    letter-spacing: 1px;
-}
