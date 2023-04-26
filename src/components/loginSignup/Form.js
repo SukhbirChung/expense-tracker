@@ -34,7 +34,7 @@ class Form extends Component {
         return (
             <div className="FormContainer">
                 <h1>{this.props.formType}</h1>
-                <form className="Form" onSubmit={ this.submitHandler}>
+                <form className="Form" onSubmit={this.submitHandler}>
                     {
                         this.props.formType === 'Sign Up' ?
                             <div className="Form-InputWrapper">

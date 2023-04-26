@@ -2,7 +2,17 @@
     box-sizing: border-box;
 }
 
-.Homepage {
+.Homepage{
+    padding: 2rem 1rem;
+    letter-spacing: 1px;
+}
+
+button {
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/*.Homepage {
     height: 100vh;
     padding-inline: 1rem;
     background-image: linear-gradient(to bottom right, rgb(46,33,172), rgb(229,76,156));
@@ -17,9 +27,4 @@ h1{
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-}
-
-button {
-    letter-spacing: 1px;
-    cursor: pointer;
-}
+}*/
