@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Form from './components/loginSignup/Form';
 import './Homepage.css';
-//import MainHeading from './components/MainHeading';
-//import AddExpense from './components/crudExpenses/AddExpense';
-//import Expenses from './components/expenses/Expenses';
-import Login from './components/loginSignup/Login';
 
 class Homepage extends Component {
+    render() {
+        return (
+            <div className="Homepage">
+                <Routes>
+                    <Route path="/" element={<Form formType="Login" />} />
+                    <Route path="/signup" element={<Form formType="Sign Up" />} />
+                </Routes>
+            </div>
+        );
+    }
+}
+
+export default Homepage;
+
     //constructor(props) {
     //    super(props);
     //    this.addNewExpense = this.addNewExpense.bind(this);
@@ -22,18 +34,9 @@ class Homepage extends Component {
     //        return { allExpenses: [...currentState.allExpenses, { expenseDate: myDate, expenseType: newExpense.expenseType, expensePrice: Number(newExpense.expensePrice) }] }
     //    })
     //}
-
-    render() {
-        return (
-            <div className="Homepage">
-                <Login />
-            </div>
-        );
-    }
-}
-
-export default Homepage;
-
+//import MainHeading from './components/MainHeading';
+//import AddExpense from './components/crudExpenses/AddExpense';
+//import Expenses from './components/expenses/Expenses';
 //<div className="Homepage">
 //{<MainHeading /> }
 //{<AddExpense submit={this.addNewExpense} /> }

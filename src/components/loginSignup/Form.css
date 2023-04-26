@@ -1,0 +1,56 @@
+.FormContainer {
+    width: 100%;
+    max-width: 450px;
+    height: 70%;
+    border-radius: 0.5rem;
+    padding: 3rem 1.5rem;
+    background-color: #fff;
+}
+
+.Form {
+    margin-bottom: 6rem;
+}
+
+.Form-InputWrapper {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid gray;
+}
+
+    .Form-InputWrapper:last-of-type {
+        margin-bottom: 4rem;
+    }
+
+    .Form-InputWrapper label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .Form-InputWrapper input {
+        border: none;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+        .Form-InputWrapper input:focus {
+            outline: none;
+        }
+
+.Form-SubmitButton {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding-block: 0.75rem;
+    background-image: linear-gradient(to right, rgb(46,33,172), rgb(229,76,156));
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.Link {
+    display: block;
+    width: max-content;
+    margin: auto;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
