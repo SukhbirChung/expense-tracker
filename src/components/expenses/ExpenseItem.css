@@ -1,10 +1,26 @@
-.ExpenseItem {
-    margin-block: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #4b4b4b;
-    display: flex;
-    justify-content: space-between;
+.ExpenseItemWrapper{
+    position: relative;
 }
+
+.RemoveExpense {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+
+    .RemoveExpense button {
+        border: 2px solid black;
+        border-radius: 50%;
+        font-size: 1.2rem;
+    }
+
+    .ExpenseItem {
+        margin-block: 1.25rem;
+        padding: 0.5rem 1rem;
+        background-color: #4b4b4b;
+        display: flex;
+        justify-content: space-between;
+    }
 
 .ExpenseItem-Description {
     display: flex;
@@ -38,7 +54,7 @@
     }
 }
 
-@media(min-width: 650px){
+@media(min-width: 650px) {
     .ExpenseItem-Type {
         font-size: 1.3rem;
     }
