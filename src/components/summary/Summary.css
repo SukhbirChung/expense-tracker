@@ -1,0 +1,37 @@
+.Summary {
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
+    background-color: #f5cbef;
+}
+
+.Summary-HeadingContainer {
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Summary-Heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Summary-Filter label{
+    margin-right: 0.25rem;
+}
+
+.Summary-Filter select{
+    padding: 0.3rem 0.15rem;
+}
+
+.Summary-Body{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(min-width: 650px){
+    .Summary{
+        border-radius: 1rem;
+    }
+}

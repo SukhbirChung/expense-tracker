@@ -1,0 +1,44 @@
+.Month{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Month-Bar {
+    width: 15px;
+    height: 120px;
+    margin-bottom: 0.25rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    background-color: rgba(78,76,201, 0.3);
+    position: relative;
+}
+
+.Month-Bar-Filled {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*height: 50%;*/
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    /*background-color: red;*/
+}
+
+    /*.Month-Bar::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 50%;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background-color: red;
+    }
+*/
+
+.Month-Name{
+    font-size: 0.65rem;
+    font-weight: bold;
+}

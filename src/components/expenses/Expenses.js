@@ -16,7 +16,7 @@ class Expenses extends Component {
         const allExpenses = this.props.allExpenses;
         return (
             <div className="Expenses">
-                {allExpenses.reverse().map(
+                {allExpenses.map(
                     (eachExpense) => {
                         return <ExpenseItem key={eachExpense.id} expenseDetails={eachExpense} remove={ this.removeExpense}/>
                     }

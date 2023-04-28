@@ -1,3 +1,13 @@
+.Background {
+    height: 100vh;
+    padding-inline: 1rem;
+    background-image: linear-gradient(to bottom right, rgb(46,33,172), rgb(229,76,156));
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .FormContainer {
     width: 100%;
     max-width: 450px;
@@ -50,6 +60,7 @@
     display: block;
     width: max-content;
     margin: auto;
+    color: black;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: bold;

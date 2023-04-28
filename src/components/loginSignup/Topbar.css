@@ -1,0 +1,17 @@
+.Topbar{
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.TopbarLink{
+    margin-right: 0.5rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Topbar img{
+    width: 26px;
+}
