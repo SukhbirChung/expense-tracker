@@ -88,7 +88,7 @@ class Homepage extends Component {
 
         return (
             <div className="Homepage">
-                <Topbar />
+                {/*<Topbar />*/}
                 <MainHeading />
                 <AddExpense submit={this.addNewExpense} />
                 <Summary selectYear={this.selectYear} allExpenses={currentYearExpenses}/>
