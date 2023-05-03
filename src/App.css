@@ -56,9 +56,52 @@ strong {
     font-weight: bold;
 }
 
+#root {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+}
+
 h1 {
-    margin-bottom: 3rem;
-    text-align: center;
-    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.75rem;
     font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.Link{
+    text-decoration: none;
+}
+
+@media(min-width: 500px){
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    .Link{
+        font-size: 1.15rem;
+    }
+}
+
+@media(min-width: 700px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    .Link {
+        font-size: 1.3rem;
+    }
 }

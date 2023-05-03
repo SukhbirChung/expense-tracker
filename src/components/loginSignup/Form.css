@@ -1,22 +1,27 @@
-.Background {
-    height: 100vh;
-    padding: 2rem 1rem;
+.FormBackground {
+    padding: 1rem;
     background-image: linear-gradient(to bottom right, rgb(46,33,172), rgb(229,76,156));
-    letter-spacing: 1px;
 }
 
 .FormContainer {
     max-width: 450px;
     margin: auto;
     border-radius: 0.5rem;
-    padding: 3rem 1.5rem 2rem;
+    padding: 2rem 1rem;
     background-color: #fff;
 }
 
 .Form {
-    margin-bottom: 3.5rem;
+    border: 1px solid black;
+    margin-bottom: 2.5rem;
 }
 
+.FormLink{
+    /*display: block;
+    width: max-content;
+    margin: auto;*/
+}
+/*
 .Form-InputWrapper {
     margin-bottom: 2rem;
     border-bottom: 2px solid gray;
@@ -61,3 +66,4 @@
     font-size: 0.9rem;
     font-weight: bold;
 }
+*/
