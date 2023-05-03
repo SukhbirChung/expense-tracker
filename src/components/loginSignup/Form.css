@@ -4,7 +4,7 @@
 }
 
 .FormContainer {
-    max-width: 450px;
+    max-width: 350px;
     margin: auto;
     border-radius: 0.5rem;
     padding: 2rem 1rem;
@@ -12,50 +12,70 @@
 }
 
 .Form {
-    border: 1px solid black;
     margin-bottom: 2.5rem;
 }
 
-.FormLink{
-    /*display: block;
-    width: max-content;
-    margin: auto;*/
-}
-/*
-.Form-InputWrapper {
+.FormInputWrapper {
     margin-bottom: 2rem;
-    border-bottom: 2px solid gray;
 }
 
-    .Form-InputWrapper:last-of-type {
-        margin-bottom: 3rem;
-    }
-
-    .Form-InputWrapper label {
+    .FormInputWrapper label {
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 
-    .Form-InputWrapper input {
-        border: none;
+    .FormInputWrapper input {
         width: 100%;
-        font-size: 1rem;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 0.25rem;
+        font-size: 1.15rem;
     }
 
-        .Form-InputWrapper input:focus {
-            outline: none;
-        }
-
-.Form-SubmitButton {
+.FormSubmitButton {
     width: 100%;
     border: none;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
     padding-block: 0.75rem;
     background-image: linear-gradient(to right, rgb(46,33,172), rgb(229,76,156));
     color: white;
     font-size: 0.75rem;
     font-weight: bold;
 }
+
+.LoginLink {
+    background-color: #4762af;
+}
+
+.SignupLink {
+    background-color: green;
+}
+
+.FormLink {
+    /*display: block;
+    width: max-content;
+    margin: auto;*/
+}
+
+
+
+
+
+
+/*
+    .Form-InputWrapper:last-of-type {
+        margin-bottom: 3rem;
+    }
+
+    
+
+    
+
+        .Form-InputWrapper input:focus {
+            outline: none;
+        }
+
+
 
 .Link {
     display: block;

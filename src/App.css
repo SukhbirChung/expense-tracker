@@ -74,7 +74,14 @@ h2 {
     text-align: center;
 }
 
-.Link{
+.Link {
+    display: block;
+    width: 250px;
+    margin: auto;
+    border-radius: 0.25rem;
+    padding-block: 0.75rem;
+    color: #fff;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -86,10 +93,6 @@ h2 {
     h2{
         font-size: 1.3rem;
     }
-
-    .Link{
-        font-size: 1.15rem;
-    }
 }
 
 @media(min-width: 700px) {
@@ -99,9 +102,5 @@ h2 {
 
     h2 {
         font-size: 1.45rem;
-    }
-
-    .Link {
-        font-size: 1.3rem;
     }
 }
