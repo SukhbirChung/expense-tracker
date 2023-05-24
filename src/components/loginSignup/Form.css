@@ -1,9 +1,12 @@
 .FormBackground {
-    padding: 1rem;
+    height: 100vh;
+    padding-inline: 1rem;
     background-image: linear-gradient(to bottom right, rgb(46,33,172), rgb(229,76,156));
+    display: flex;
 }
 
 .FormContainer {
+    width: 100%;
     max-width: 350px;
     margin: auto;
     border-radius: 0.5rem;
@@ -43,9 +46,13 @@
     font-weight: bold;
 }
 
-.LoginLink {
-    background-color: #4762af;
-}
+    .FormSubmitButton:hover{
+        cursor: pointer;
+    }
+
+    .LoginLink {
+        background-color: #4762af;
+    }
 
 .SignupLink {
     background-color: green;

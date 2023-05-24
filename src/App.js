@@ -7,7 +7,7 @@ import './App.css';
 function App() {
     return (
         <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={<Homepage isFilled/>} />
             <Route path="/login" element={<Form formType="Login" />} />
             <Route path="/signup" element={<Form formType="Sign Up" />} />
             {/*<Route path="/settings" element={<Settings />} />*/}

@@ -1,41 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import formHelper from '../../helpers/formHelper';
 import './Form.css';
 
 class Form extends Component {
-    //constructor(props) {
-    //    super(props);
+    constructor(props) {
+        super(props);
 
-    //    this.formType = this.props.formType;
-    //    if (this.formType === 'Sign Up') {
-    //        this.test = <div>Already have an account?<br /> <Link className="Link" to="/login">LOGIN</Link></div>
-    //    }
+        this.state = formHelper.stateVariables;
 
+        this.inputChangeHandler = this.inputChangeHandler.bind(this);
+        this.submitHandler = this.submitHandler.bind(this);
+    }
 
-    //    this.inputChangeHandler = this.inputChangeHandler.bind(this);
-    //    this.submitHandler = this.submitHandler.bind(this);
-    //}
+    inputChangeHandler(evt) {
+        this.setState((currentState) => formHelper.inputChangeHandler(currentState, evt));
+    }
 
-    //state = {
-    //    email: '',
-    //    username: '',
-    //    password: ''
-    //}
+    submitHandler(evt) {
+        const dataSent = formHelper.submitHandler(evt, this.state);
 
-    //inputChangeHandler(evt) {
-    //    this.setState((currentState) => {
-    //        return { ...currentState, [evt.target.name]: evt.target.value };
-    //    });
-    //}
-
-    //submitHandler(evt) {
-    //    evt.preventDefault();
-    //    this.setState({
-    //        email: '',
-    //        username: '',
-    //        password: ''
-    //    });
-    //}
+        if (dataSent) {
+            this.setState(formHelper.stateVariables);
+        }
+        else {
+            console.log("Data could not be sent.");
+        }
+    }
 
     render() {
         return (
@@ -47,17 +38,17 @@ class Form extends Component {
                             this.props.formType === 'Sign Up' ?
                                 <div className="FormInputWrapper">
                                     <label htmlFor="email">Email</label>
-                                    <input id="email" type="email" name="email" required />
+                                    <input id="email" type="email" name="email" required value={this.state.email} onChange={this.inputChangeHandler} />
                                 </div> :
                                 null
                         }                
                         <div className="FormInputWrapper">
                             <label htmlFor="username">Username</label>
-                            <input id="username" type="text" name="username" required />
+                            <input id="username" type="text" name="username" required value={this.state.username} onChange={this.inputChangeHandler} />
                         </div>
                         <div className="FormInputWrapper">
                             <label htmlFor="password">Password</label>
-                            <input id="password" type="password" name="password" required minLength="6" maxLength="12" />
+                            <input id="password" type="password" name="password" required minLength="6" maxLength="12" value={this.state.password} onChange={this.inputChangeHandler} />
                         </div>
                         <button className="FormSubmitButton">{(this.props.formType).toUpperCase()}</button>
                     </form>
