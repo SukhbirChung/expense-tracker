@@ -1,29 +1,21 @@
-import React, { Component } from 'react';
-import './Expenses.css';
+import React from 'react';
 import ExpenseItem from './ExpenseItem';
+import './Expenses.css';
 
-class Expenses extends Component {
-    constructor(props) {
-        super(props);
-        this.removeExpense = this.removeExpense.bind(this);
-    }    
-
-    removeExpense(id) {
-        this.props.remove(id);
+function Expenses(props) {
+    const removeExpense = (id) => {
+        props.removeExpense(id);
     }
 
-    render() {
-        const allExpenses = this.props.allExpenses;
-        return (
-            <div className="Expenses">
-                {allExpenses.map(
-                    (eachExpense) => {
-                        return <ExpenseItem key={eachExpense.id} expenseDetails={eachExpense} remove={ this.removeExpense}/>
-                    }
-                )}
-            </div>
-        );
-    }
+    return (
+        <div className="Expenses">            
+            {props.expensesList.map(
+                (eachExpense) => {
+                    return <ExpenseItem key={eachExpense.id} expenseDetails={eachExpense} removeExpense={removeExpense}/>
+                }
+            )}
+        </div>
+    );
 }
 
 export default Expenses;

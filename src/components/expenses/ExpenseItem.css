@@ -1,4 +1,6 @@
-.ExpenseItemWrapper{
+.ExpenseItemWrapper {
+    margin-block: 1.25rem;
+    background-color: #4b4b4b;
     position: relative;
 }
 
@@ -14,13 +16,11 @@
         font-size: 1.2rem;
     }
 
-    .ExpenseItem {
-        margin-block: 1.25rem;
-        padding: 0.5rem 1rem;
-        background-color: #4b4b4b;
-        display: flex;
-        justify-content: space-between;
-    }
+.ExpenseItem {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
 
 .ExpenseItem-Description {
     display: flex;
@@ -29,7 +29,7 @@
     align-items: center;
 }
 
-.ExpenseItem-Price {
+.ExpenseItem-Amount {
     border: 1px solid white;
     border-radius: 0.5rem;
     padding: 0.5rem 0.75rem;
@@ -37,29 +37,20 @@
     font-weight: bold;
 }
 
-@media(min-width: 550px){
+
+@media(min-width: 500px){
     .ExpenseItem-Description{
         flex-direction: row;
         flex-grow: 1;
         justify-content: space-between;
     }
 
-    .ExpenseItem-Type {
+    .ExpenseItem-Title {
         margin-left: 1rem;
         font-size: 1.2rem;
     }
 
-    .ExpenseItem-Price{
+    .ExpenseItem-Amount{
         font-size: 1.3rem;
-    }
-}
-
-@media(min-width: 650px) {
-    .ExpenseItem-Type {
-        font-size: 1.3rem;
-    }
-
-    .ExpenseItem-Price {
-        font-size: 1.5rem;
     }
 }

@@ -5,7 +5,7 @@
 }
 
 .Month-Bar {
-    width: 15px;
+    width: 12px;
     height: 120px;
     margin-bottom: 0.25rem;
     border: 1px solid gray;
@@ -19,26 +19,17 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /*height: 50%;*/
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-    /*background-color: red;*/
 }
 
-    /*.Month-Bar::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 50%;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        background-color: red;
-    }
-*/
-
 .Month-Name{
-    font-size: 0.65rem;
+    font-size: 0.5rem;
     font-weight: bold;
+}
+
+@media(min-width: 500px){
+    .Month-Name {
+        font-size: 0.75rem;
+    }
 }

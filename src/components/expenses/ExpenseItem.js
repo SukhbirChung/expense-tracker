@@ -1,34 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 
-class ExpenseItem extends Component {
-    constructor(props) {
-        super(props);
-        this.removeExpense = this.removeExpense.bind(this);
+function ExpenseItem(props) {
+    const expenseDetails = props.expenseDetails;
+
+    const removeExpense = () => {
+        props.removeExpense(props.expenseDetails.id);
     }
 
-    removeExpense() {
-        this.props.remove(this.props.expenseDetails.id);
-    }
-
-    render() {
-        const expenseDetails = this.props.expenseDetails;
-        return (
-            <div className="ExpenseItemWrapper">
-                <div className="RemoveExpense">
-                    <button onClick={ this.removeExpense}>X</button>
-                </div>
-                <div className="ExpenseItem">
-                    <ExpenseDate expenseDate={expenseDetails.expenseDate} />
-                    <div className="ExpenseItem-Description">
-                        <h2 className="ExpenseItem-Type">{expenseDetails.expenseType}</h2>
-                        <div className="ExpenseItem-Price">$ {expenseDetails.expensePrice.toFixed(2)}</div>
-                    </div>
-                </div>                
+    return (
+        <div className="ExpenseItemWrapper">
+            <div className="RemoveExpense">
+                <button onClick={removeExpense}>X</button>
             </div>
-        );
-    }
+            <div className="ExpenseItem">
+                <ExpenseDate expenseDate={expenseDetails.date} />
+                <div className="ExpenseItem-Description">
+                    <h4 className="ExpenseItem-Title">{expenseDetails.title}</h4>
+                    <div className="ExpenseItem-Amount">$ {expenseDetails.amount}</div>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default ExpenseItem;

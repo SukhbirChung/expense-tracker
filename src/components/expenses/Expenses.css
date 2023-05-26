@@ -1,11 +1,12 @@
 .Expenses {
+    margin-bottom: 1rem;
     border-radius: 0.75rem;
     padding: 1rem;
     background-color: rgb(31, 31, 31);
     color: white;
 }
 
-@media(min-width: 650px) {
+@media(min-width: 500px) {
     .Expenses {
         border-radius: 1rem;
         padding: 1.5rem;

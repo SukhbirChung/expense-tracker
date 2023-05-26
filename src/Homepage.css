@@ -38,25 +38,3 @@
         font-size: 1.3rem;
     }
 }
-
-/*button {
-    letter-spacing: 1px;
-    cursor: pointer;
-}*/
-
-/*.Homepage {
-    height: 100vh;
-    padding-inline: 1rem;
-    background-image: linear-gradient(to bottom right, rgb(46,33,172), rgb(229,76,156));
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1{
-    margin-bottom: 3rem;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}*/

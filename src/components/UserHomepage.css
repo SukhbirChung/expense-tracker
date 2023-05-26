@@ -1,0 +1,27 @@
+.UserHomepage {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem 1rem 0;
+    letter-spacing: 1px;
+}
+
+.UserHomepageMainHeading {
+    border-radius: 0.75rem;
+    padding-block: 1rem;
+    background-color: #40005d;
+    color: white;
+}
+
+@media(min-width: 500px){
+    .UserHomepageMainHeading {
+        border-radius: 1rem;
+        padding-block: 1.25rem;
+    }
+}
+
+@media(min-width: 700px) {
+    .UserHomepageMainHeading {
+        border-radius: 1.25rem;
+        padding-block: 1.5rem;
+    }
+}

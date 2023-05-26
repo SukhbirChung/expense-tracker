@@ -1,41 +1,29 @@
-import React, { Component } from 'react';
+import React, { useState} from 'react';
 import './AddExpense.css';
 import RenderAddExpenseForm from './RenderAddExpenseForm';
 
-class AddExpense extends Component {
-    constructor(props) {
-        super(props);
-        this.renderAddExpenseForm = this.renderAddExpenseForm.bind(this);
-        this.addNewExpense = this.addNewExpense.bind(this);
+function AddExpense(props) {
+    let [displayForm, changeDisplayForm] = useState(false);
+
+    const renderAddExpenseForm = () => {
+        changeDisplayForm(true);
     }
 
-    state = {
-        displayForm: false
+    const submitExpense = (newExpense) => {
+        changeDisplayForm(false);
+        if (newExpense === 'cancel') { }
+        else { props.addExpense(newExpense);}        
     }
 
-    renderAddExpenseForm() {
-        this.setState({
-            displayForm: true
-        });
-    }
-
-    addNewExpense(newExpense) {
-        this.props.submit(newExpense);
-        this.setState({
-            displayForm: false
-        })
-    }
-
-    render() {
-        return (
-            <div className="AddExpense">
-                {this.state.displayForm ?
-                    <RenderAddExpenseForm submit={this.addNewExpense} /> :
-                    <button className="AddExpense-Button" onClick={this.renderAddExpenseForm}>Add Expense</button>
-                }
-            </div>
-        );
-    }
+    return (
+        <div className="AddExpense">
+            {
+                displayForm ?
+                    <RenderAddExpenseForm sendExpense={ submitExpense}/> :
+                    <button className="AddExpense-Button" onClick={renderAddExpenseForm}>Add Expense</button>
+            }
+        </div>
+    );
 }
 
 export default AddExpense;

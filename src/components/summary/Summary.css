@@ -1,37 +1,103 @@
 .Summary {
-    margin-bottom: 1.5rem;
-    border-radius: 0.75rem;
-    padding: 1.5rem 1rem;
-    background-color: #f5cbef;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
 
-.Summary-HeadingContainer {
-    margin-bottom: 0.75rem;
+.Piechart {
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.Summary-Heading {
-    font-size: 1.5rem;
-    font-weight: bold;
+.PiechartFigure {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 50%;
 }
 
-.Summary-Filter label{
+    .PiechartPercentages h3{
+        margin-bottom: 0.75rem;
+    }
+
+    .PiechartPercentages li::before {
+        content: '\25A0';
+        margin-right: 5px;
+        font-size: 1.5rem;
+    }
+
+    .PiechartPercentages li:nth-of-type(1)::before{
+        color: violet;
+    }
+
+    .PiechartPercentages li:nth-of-type(2)::before {
+        color: indigo;
+    }
+
+    .PiechartPercentages li:nth-of-type(3)::before {
+        color: blue;
+    }
+
+    .PiechartPercentages li:nth-of-type(4)::before {
+        color: green;
+    }
+
+    .PiechartPercentages li:nth-of-type(5)::before {
+        color: yellow;
+    }
+
+    .PiechartPercentages li:nth-of-type(6)::before {
+        color: orange;
+    }
+
+    .PiechartPercentages li:nth-of-type(7)::before {
+        color: red;
+    }
+
+    .PiechartPercentages li:nth-of-type(8)::before {
+        color: pink;
+    }
+
+.SummaryByYear {
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
+    background-color: #f5cbef;
+}
+
+.Summary-Filter{
+    margin-bottom: 0.75rem;
+}
+
+.Summary-Filter label {
     margin-right: 0.25rem;
 }
 
-.Summary-Filter select{
-    padding: 0.3rem 0.15rem;
-}
-
-.Summary-Body{
+.Summary-Body {
     display: flex;
     justify-content: space-between;
 }
 
-@media(min-width: 650px){
-    .Summary{
+@media(min-width: 500px) {
+    .Summary {
+        font-size: 1rem;
+    }
+
+    .Piechart {
+        justify-content: space-around;
+    }
+
+    .PiechartFigure {
+        width: 225px;
+        height: 225px;
+    }
+
+    .SummaryByYear{
         border-radius: 1rem;
+    }
+
+    .Summary-Body{
+        width: 80%;
+        margin: auto;
     }
 }
