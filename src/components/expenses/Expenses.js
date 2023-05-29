@@ -7,6 +7,12 @@ function Expenses(props) {
         props.removeExpense(id);
     }
 
+    props.expensesList.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateA - dateB;
+    });
+
     return (
         <div className="Expenses">            
             {props.expensesList.map(

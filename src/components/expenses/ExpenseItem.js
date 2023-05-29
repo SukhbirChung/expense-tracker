@@ -18,7 +18,7 @@ function ExpenseItem(props) {
                 <ExpenseDate expenseDate={expenseDetails.date} />
                 <div className="ExpenseItem-Description">
                     <h4 className="ExpenseItem-Title">{expenseDetails.title}</h4>
-                    <div className="ExpenseItem-Amount">$ {expenseDetails.amount}</div>
+                    <div className="ExpenseItem-Amount">$ {expenseDetails.amount.toFixed(2)}</div>
                 </div>
             </div>
         </div>

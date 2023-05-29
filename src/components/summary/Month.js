@@ -2,7 +2,7 @@ import React from 'react';
 import './Month.css';
 
 function Month(props) {
-    let totalExpense = (props.totalExpense / 1000) * 100;
+    let totalExpense = (props.totalExpense / 5000) * 100;
     let backgroundColor;
     if (totalExpense > 100) {
         totalExpense = 100;
@@ -26,7 +26,7 @@ function Month(props) {
 
     return (
         <div className="Month">
-            <div className="Month-Bar">
+            <div className='Month-Bar' onClick={props.onCurrentMonthChange.bind(this, props.month)}>
                 <div className="Month-Bar-Filled" style={myStyles}></div>
             </div>
             <div className="Month-Name">{props.month}</div>

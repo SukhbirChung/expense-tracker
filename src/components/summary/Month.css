@@ -14,6 +14,12 @@
     position: relative;
 }
 
+.Month-Bar:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0 1px 1px;
+}
+
 .Month-Bar-Filled {
     position: absolute;
     left: 0;
