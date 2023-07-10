@@ -20,3 +20,16 @@ The web app can be visted at [https://myexpensetracker.ca/](https://myexpensetra
 
 ### What am I working on right now?
 I am currently following a Udemy course to learn how to use React routers and implement them in my app, specifically for creating a login/signup page. Once users successfully log in, they will be directed to their individual app homepage.
+
+### Component Hierarchy
+* App
+  * components/UserHomepage
+    * summary/Summary
+      * Piechart
+      * SummaryByYear
+        * Month
+    * crudExpenses/AddExpense
+      * RenderAddExpenseForm
+    * expenses/Expenses
+      * ExpenseItem
+        * ExpenseDate      
